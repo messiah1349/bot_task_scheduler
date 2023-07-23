@@ -1,14 +1,7 @@
-from lib.scheduler import TelegramScheduler
-import time
+from lib.api import routes
 
-token = '214139458:AAH8UGU0PW3vUE1lRz-gjXnlB6TroUvpfUk'
-chat_id = '46340594'
 
-ts = TelegramScheduler(token, chat_id)
-ts.add_task('1', 'posrat', '18.07.2023 19:57:05')
-# print(ts.schedule)
+from lib import app
 
-print('startanuli!!')
-while True:
-    ts.start_scheduling()
-    time.sleep(1)
+if __name__ == '__main__':
+    app.run(host='127.0.0.1', port=5001)
