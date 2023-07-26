@@ -23,4 +23,6 @@ COPY . /app
 ENV SCHEDULER_TELEGRAM_TOKEN=$SCHEDULER_TELEGRAM_TOKEN
 ENV CHAT_ID=$CHAT_ID
 
+EXPOSE 5000/tcp
+
 CMD ["poetry", "run", "flask", "--app", "main", "run", "--host=0.0.0.0"]
