@@ -37,7 +37,6 @@ root_module_logger.addHandler(stderr_handler)
 
 root_module_logger.info("Logging was inited")
 
-
 telegram_scheduler = TelegramScheduler(TELEGRAM_TOKEN, CHAT_ID)
 telegram_scheduler.start_scheduling()
 app = AppInitializer().get_app()
