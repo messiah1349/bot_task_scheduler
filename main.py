@@ -1,6 +1,4 @@
 from lib.api import routes
-
-
 from lib import app
 
 if __name__ == '__main__':

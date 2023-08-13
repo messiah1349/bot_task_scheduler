@@ -25,4 +25,4 @@ ENV CHAT_ID=$CHAT_ID
 
 EXPOSE 5000/tcp
 
-CMD ["poetry", "run", "flask", "--app", "main", "run", "--host=0.0.0.0"]
+CMD ["poetry", "run", "gunicorn", "--bind", "0.0.0.0:5000", "main:app"]
